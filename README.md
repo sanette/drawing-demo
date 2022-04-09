@@ -12,3 +12,5 @@ the right spot. This app features:
 * unlimited undo
 * unlimited creativity!
 
+![screenshot](drawing-demo.png)
+
