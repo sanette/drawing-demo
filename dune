@@ -1,0 +1,3 @@
+(executable
+ (name drawing)
+ (libraries bogue))
