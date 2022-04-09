@@ -1,6 +1,7 @@
 # drawing-demo
 
-_Very basic drawing app to demonstrate the use of Bogue._
+_Very basic drawing app to demonstrate the use of
+[Bogue](https://github.com/sanette/bogue)._
 
 Want to train your handwriting, or draw with constraints? You're on
 the right spot. This app features:
@@ -14,3 +15,12 @@ the right spot. This app features:
 
 ![screenshot](drawing-demo.png)
 
+## install
+
+I don't have a standalone package. Help needed!
+
+You need to install bogue (>= 20220408) and compile the drawing-demo with
+
+```
+dune exec ./drawing.exe
+```
