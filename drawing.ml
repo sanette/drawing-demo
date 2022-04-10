@@ -28,7 +28,8 @@ let print s = Printf.ksprintf print_endline s
 (* Shortcup to get the result of SDL functions *)
 let go = Utils.go
 let do_option o f = Option.iter f o
-    
+let plural s x = Printf.sprintf "%i %s%s" x s (if x > 1 then "s" else "")
+
 let new_canvas () =
   { current_color = Draw.(opaque black);
     strokes = Queue.create ();
@@ -90,7 +91,8 @@ let release canvas a =
   let stroke = { color = canvas.current_color;
                  points = canvas.current_points } in
   Queue.add stroke canvas.strokes;
-  print "Mouse released. We have now %u strokes." (Queue.length canvas.strokes);
+  print "Mouse released. We have now %s."
+    (plural "stroke" (Queue.length canvas.strokes));
   let area = W.get_sdl_area a in
   (* The current points should be cleared just before saving the cache and just
      after drawing them... *)
